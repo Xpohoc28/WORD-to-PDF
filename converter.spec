@@ -6,17 +6,16 @@ a = Analysis(
     ['test2.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[
+        ('icon.ico', '.'),
+        ('utils.py', '.')
+    ],
     hiddenimports=[
         'tkinter',
         'tkinter.filedialog',
         'tkinter.ttk',
         'tkinter.messagebox',
         'docx2pdf',
-        'adobe.pdfservices.operation.auth.credentials',
-        'adobe.pdfservices.operation.execution_context',
-        'adobe.pdfservices.operation.io.file_ref',
-        'adobe.pdfservices.operation.pdfops.convert_pdf_operation',
         'queue',
         'threading',
         'os',
@@ -29,8 +28,7 @@ a = Analysis(
         'docx2pdf.converter',
         'sys',
         'subprocess',
-        'concurrent.futures',
-        'logging'
+        'concurrent.futures'
     ],
     hookspath=[],
     hooksconfig={},
@@ -51,17 +49,17 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='DocToPdfConverter',
-    debug=True,
+    name='DocxPdfConverter',
+    debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=True,
+    console=False,
     disable_windowed_traceback=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='C:\\Users\\Xpohoc28\\Coding\\gang\\icon.ico'
+    icon='icon.ico'
 )
